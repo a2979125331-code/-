@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Mini Game</title>
+  <link rel="stylesheet" href="./styles/main.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="game-card">
+      <div class="game-header">
+        <div>
+          <h1>宝石闪避战</h1>
+          <p>收集宝石，避开巡逻敌人。</p>
+        </div>
+        <button id="restartButton" type="button">重新开始</button>
+      </div>
+
+      <canvas id="gameCanvas" width="800" height="480" aria-label="Web mini game canvas"></canvas>
+
+      <div class="game-help">
+        <span>移动：方向键 / W A S D</span>
+        <span>重开：R</span>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
