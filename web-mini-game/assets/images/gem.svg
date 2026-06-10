@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="gem placeholder">
+  <path d="M32 4 58 24 32 60 6 24z" fill="#facc15"/>
+  <path d="M32 4 44 24H20z" fill="#fde68a"/>
+  <path d="M20 24h24L32 60z" fill="#eab308"/>
+  <path d="M6 24h52" stroke="#92400e" stroke-width="3" opacity="0.35"/>
+</svg>
