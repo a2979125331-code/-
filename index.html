@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>单机三国杀 · 四人身份局</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <h1>单机三国杀</h1>
+        <p>四人身份局 · 基础包 · 纯前端单机版</p>
+      </div>
+      <div class="top-actions">
+        <button id="newGameBtn" class="secondary">重新开局</button>
+      </div>
+    </header>
+
+    <section id="setupPanel" class="panel setup-panel">
+      <h2>选择武将</h2>
+      <p class="hint">你的身份会随机分配并在开局后显示。AI 身份在阵亡前保持隐藏。</p>
+      <div id="generalGrid" class="general-grid"></div>
+      <button id="startBtn" class="primary" disabled>开始四人身份局</button>
+    </section>
+
+    <section id="gamePanel" class="game-panel hidden">
+      <div class="status-strip">
+        <div><span class="label">你的身份</span><strong id="myRole">-</strong></div>
+        <div><span class="label">当前回合</span><strong id="turnInfo">-</strong></div>
+        <div><span class="label">阶段</span><strong id="phaseInfo">-</strong></div>
+        <div><span class="label">牌堆</span><strong id="deckInfo">-</strong></div>
+      </div>
+
+      <div class="board">
+        <div id="players" class="players"></div>
+
+        <div class="center-panel">
+          <div id="messageBox" class="message-box">准备开始。</div>
+          <div id="actionHint" class="action-hint">请选择一张牌。</div>
+          <div id="targetBar" class="target-bar hidden"></div>
+          <div id="skillBar" class="skill-bar"></div>
+          <div class="phase-actions">
+            <button id="endPlayBtn" class="primary hidden">结束出牌</button>
+            <button id="cancelActionBtn" class="secondary hidden">取消选择</button>
+          </div>
+        </div>
+      </div>
+
+      <section class="hand-panel">
+        <div class="hand-title">
+          <h2>你的手牌</h2>
+          <span id="handCount">0 张</span>
+        </div>
+        <div id="hand" class="hand"></div>
+      </section>
+
+      <section class="log-panel">
+        <div class="log-title">
+          <h2>战报</h2>
+          <button id="clearLogBtn" class="text-button">清空显示</button>
+        </div>
+        <div id="log" class="log"></div>
+      </section>
+    </section>
+
+    <section id="resultPanel" class="result-panel hidden">
+      <h2 id="resultTitle">对局结束</h2>
+      <p id="resultText"></p>
+      <button id="playAgainBtn" class="primary">再来一局</button>
+    </section>
+  </main>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>
